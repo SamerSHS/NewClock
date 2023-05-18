@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    
+    height: 100vh;
+    display: flex;
+    background-color: rgb(14, 0, 54);
+    background-repeat: repeat;
+    flex-direction: row;
+    
+  }
+  
+  #timer {
+    width: 90px;
+    height: 60px;
+    padding: 5px;
+    margin: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: aliceblue;
+    color:#6d37b3;
+    border: 0.5px solid #200642;
+    border-radius: 20px 10px;
+    font-size: 50px;
+      }
+
+  .memory-game {
+     width: 90vw;
+    height: 90vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr  1fr;
+    grid-gap: 1px;
+    perspective: 1000px;
+    position: relative
+  }
+
+  #finish {
+
+    height: 30rem;
+    width: 30rem;
+    position: absolute;
+    padding: 2rem;
+    margin:7rem;
+    margin-left: 35rem;
+    background-color: #152657;
+    color: #fff;
+    display: none;
+    font-size: 10rem;
+    border-radius: 35px;
+    border: 10px dotted #fff
+
+  }
+
+  #cry {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    padding: 2rem;
+    /* text-align: center; */
+    margin: 2rem 40rem;
+    background-color: rgb(204, 0, 0);
+    color: #fff;
+    display: none;
+    font-size: 10rem;
+    border-radius: 35px;
+    border: 10px dotted  #fff
+  }
+
+  .cell{
+    /* border: 2px solid #fff; */
+    width:  14rem;
+    height: 12rem;
+    margin: 10px; 
+    padding-right: 5px;
+    font-size: 2.5rem;
+    text-align: end;
+    opacity: 50%;
+    background-color: rgba(253, 239, 239, 0.082);
+    font-weight: 800;
+    color:rgb(255, 255, 255)
+    
+  }
+  
+  .table{
+   
+    width: 90vw;
+    height: 90vh;
+    /* margin-left: 0.2rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr  1fr;
+    grid-gap: 1px;
+   /* display: flex;
+    flex-wrap: wrap;*/
+    /* perspective: 1000px; */
+    position: absolute;
+    /* z-index: 2; */
+
+
+  }
+
+ 
+  .memory-card {
+    
+    width: 12rem;
+    height: 12rem;
+    margin: 3px;
+    padding: 5px;
+
+    position: relative;
+    /* transform: scale(1); */
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    border-radius: 30px;
+  }
+  
+
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    position: absolute;
+    border-radius: 30px;
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    background-color: #fff;
+    transform: rotateY(180deg);
+    font-size: 3rem;
+    font-weight: bold ;
+    color: rgb(23, 0, 105);
+    text-align:center;
+    padding: 50px 0 ;
+     }
+
+     .answer {
+      background-color: #fff;
+      color: rgba(209, 47, 47, 0.829);
+      padding: 0
+     }
